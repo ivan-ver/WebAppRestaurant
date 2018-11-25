@@ -4,14 +4,20 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:postgresql://localhost:5432/restaurants</property>
+    <!--<property name="connection.url">jdbc:mysql://localhost:3306/restaurant?serverTimezone=UTC</property>-->
+    <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
+    <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>-->
+
+    <property name="connection.url">jdbc:postgresql://localhost:5432/restaurant</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
     <property name="connection.username">root</property>
     <property name="connection.password">root</property>
 
-    <!-- DB schema will be updated if needed -->
-    <property name="hbm2ddl.auto">update</property>
-    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL94Dialect</property>
-    <mapping class="model.Users"/>
+    <property name="hbm2ddl.auto">validate</property>
+    <mapping class="model.Person"/>
+    <mapping class="model.Assessment"/>
+    <mapping class="model.Restaurant"/>
+    <mapping class="model.Dish"/>
   </session-factory>
 </hibernate-configuration>

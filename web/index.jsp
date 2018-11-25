@@ -11,7 +11,9 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1>RESTAURANT</h1>
-    <a href="/users">users</a>
+
+    <a href="/user/users/users">users</a>
+
+    <a href="/restaurant/restaurants"><botton>List</botton></a>
 </body>
 </html>
