@@ -1,4 +1,4 @@
-package repository.entityConnection;
+package repository;
 
 import model.AbstractBaseEntity;
 

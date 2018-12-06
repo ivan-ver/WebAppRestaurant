@@ -15,15 +15,16 @@
                     <th>Ресторан</th>
                     <th>Меню</th>
                     <th>Оценка посетителей</th>
-                    <th></th>
                 </tr>
                 <tr>
                     <th><a href="/restaurant/showAddRestaurantPage"><p><button>Добавить ресторан</button></a></th>
                 </tr>
             <c:forEach items="${restaurants}" var="restaurant">
                 <tr>
-                    <td>
+                    <td align="center">
                         <b>${restaurant.restaurant_name}</b>
+                        <b><a href="/restaurant/showUpdateRestaurant/${restaurant.id}"><p><button>Изменить</button></a></b>
+                        <b><a href="/restaurant/deleteRestaurant/${restaurant.id}"><p><button>Удалить</button></a></b>
                     </td>
                     <td>
                         <c:if test="${restaurant.dishes.size() > 0}">
@@ -42,10 +43,6 @@
                     </td>
                     <td align="center">
                         <b>${restaurant.mean_assessment}</b>
-                    </td>
-                    <td align="center">
-                        <a href="/restaurant/showUpdateRestaurant/${restaurant.id}"><p><button>Изменить</button></a>
-                        <a href="/restaurant/deleteRestaurant/${restaurant.id}"><p><button>Удалить</button></a>
                     </td>
                 </tr>
             </c:forEach>

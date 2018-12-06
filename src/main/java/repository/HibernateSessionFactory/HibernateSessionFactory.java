@@ -1,4 +1,4 @@
-package repository;
+package repository.HibernateSessionFactory;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
