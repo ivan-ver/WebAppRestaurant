@@ -1,7 +1,7 @@
 package service;
 
 import model.AbstractBaseEntity;
-import model.Restaurant;
+import model.Person;
 
 import java.util.List;
 

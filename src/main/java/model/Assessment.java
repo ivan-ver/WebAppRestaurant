@@ -1,9 +1,13 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+
 import java.time.LocalDateTime;
 import java.util.Date;
+
 
 @Entity
 @Table(name = "assessment", schema = "public")
@@ -43,7 +47,8 @@ public class Assessment extends AbstractBaseEntity {
         this.date_time = date_time;
     }
 
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne//(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_person")
     public Person getPerson() {
         return person;
@@ -53,8 +58,10 @@ public class Assessment extends AbstractBaseEntity {
         this.person = person;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_restaurant")
+    @JsonIgnore
+    @ManyToOne//(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_restaurant",nullable=false)
+    @NotNull
     public Restaurant getRestaurant() {
         return restaurant;
     }

@@ -1,32 +1,52 @@
 package model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import java.util.List;
+import java.util.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = Person.BY_EMAIL, query = "FROM Person WHERE email = :email"),
+})
 @Table(name = "person", schema = "public")
 public class Person extends AbstractBaseEntity {
+
+    public static final String BY_EMAIL = "Person.getByEmail";
 
     private String email;
     private String person_name;
     private String password;
     private String status;
-    private List<Assessment> assessments;
+    private Set<Assessment> assessments;
+    private boolean enabled = true;
 
-    public Person(int id, String email, String user_name, String password, String status) {
+
+    public Person(int id, String email, String person_name, String password, String status, Set<Assessment> assessments, boolean enabled) {
         super(id);
         this.email = email;
-        this.person_name = user_name;
+        this.person_name = person_name;
         this.password = password;
         this.status = status;
+        this.assessments = assessments;
+        this.enabled = enabled;
+    }
+
+    public Person(String email, String person_name, String password, String status, Set<Assessment> assessments, boolean enabled) {
+        this.email = email;
+        this.person_name = person_name;
+        this.password = password;
+        this.status = status;
+        this.assessments = assessments;
+        this.enabled = enabled;
     }
 
     public Person() { }
 
     @Basic
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     @Email
     public String getEmail() {
         return email;
@@ -67,11 +87,33 @@ public class Person extends AbstractBaseEntity {
     }
 
     @OneToMany(mappedBy = "person", fetch = FetchType.LAZY)
-    public List<Assessment> getAssessments() {
+    @JsonIgnore
+    public Set<Assessment> getAssessments() {
         return assessments;
     }
 
-    public void setAssessments(List<Assessment> assessments) {
+    public void setAssessments(Set<Assessment> assessments) {
         this.assessments = assessments;
+    }
+
+    @Column(name = "enabled", nullable = false, columnDefinition = "bool default true")
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "email='" + email + '\'' +
+                ", person_name='" + person_name + '\'' +
+                ", password='" + password + '\'' +
+                ", status=" + status +
+                ", assessments=" + assessments +
+                ", enabled=" + enabled +
+                '}';
     }
 }
