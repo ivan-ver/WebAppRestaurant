@@ -1,0 +1,162 @@
+body{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+header{
+    background: gray;
+    color: #f4f421;
+    padding-bottom: 3px;
+    padding-top: 0px;
+    padding-left: 10px;
+    margin: 0 auto;
+    font-size: 150%;
+    text-align: left;
+    height: 35px;
+}
+div#title{
+    float: left;
+    text-align: left;
+}
+div#inlet_button{
+    background: gray;
+    height: 32px;
+    width: 80px;
+    display: inline-block;
+    float: right;
+    margin-top: 0;
+    margin-right: 40px;
+    padding: 5px 1px 1px 1px;
+    text-align: center;
+    font-size: 80%;
+    cursor: pointer;
+}
+div#inlet_button:hover{
+    background-color: #dfdfdf;
+    color: black;
+}
+div.login_form{
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 7px;
+    float: right;
+    box-shadow: -6px 6px 10px rgba(0,0,0,0.5);
+    position: relative;
+}
+.login_form::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 180px;
+    bottom: 175px; /* Положение треугольника */
+    border: 20px solid transparent; /* Прозрачные границы */
+    border-bottom: 20px solid white;
+}
+
+
+.modal{
+     position: absolute;
+     z-index: 1000;
+     background-color: white;
+ }
+#share-options{
+    position: relative;
+}
+
+#overlay {
+    z-index:10; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+    position:fixed; /* всегдa перекрывaет весь сaйт */
+    background-color:#000; /* чернaя */
+    opacity:0.8; /* нo немнoгo прoзрaчнa */
+    -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+    filter:alpha(opacity=80);
+    width:100%;
+    height:100%; /* рaзмерoм вo весь экрaн */
+    top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+    left:0;
+    cursor:pointer;
+    display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+
+
+
+#close{
+    width: 20px;
+    height: 20px;
+    background-color: #bc0000;
+    padding: 0 0 0 0;
+    color: white;
+}
+
+
+
+
+
+
+
+div.RestTable{
+    margin: 10px 360px 10px 10px;
+}
+
+
+td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+    width: 40px;
+}
+tr.shown td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_close.png') no-repeat center center;
+    width: 40px;
+}
+th.restaurantName{
+    width: 200px;
+    text-align: center;
+}
+th.restaurantAssessment{
+    width: 300px;
+    text-align: center;
+}
+
+
+
+td.login_field{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.field{
+    width: 230px;
+    height: 30px;
+    font-size: 120%;
+    border-radius: 7px;
+}
+button, #login_b{
+    width: 100px;
+    height: 33px;
+    background-color: gray;
+    color: #f4f421;
+    border-radius: 7px;
+    border-style: hidden;
+    font-size: 90%;
+    cursor: pointer;
+}
+button, #login_b:hover{
+    background-color: #dfdfdf;
+    color: black;
+}
+#reg_text{
+    text-align: right;
+}
+td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+    width: 40px;
+}
+tr.shown td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_close.png') no-repeat center center;
+    width: 40px;
+}
+
+
+

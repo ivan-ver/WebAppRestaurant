@@ -1,0 +1,62 @@
+table.shownTables {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 5px;
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+}
+
+table.shownTables th {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 12px 10px;
+    border-bottom: 2px solid #F56433;
+    color: black;
+}
+
+table.shownTables td{
+    padding: 10px;
+    color: black;
+}
+
+.details-control{
+    width: 20px;
+}
+
+.restaurantName {
+    width: auto;
+    text-align: center;
+}
+
+.restaurantAssessment{
+    width: auto;
+    text-align: center;
+}
+
+.fixed{
+    width: 120px;
+}
+
+table.hiddenTables{
+    border-top:solid 3px #b97204;
+    width: 60%;
+}
+
+td.dish {
+    width: 250px;
+    border: hidden;
+    text-align: left;
+}
+td.price{
+    width: 50%;
+    text-align: right;
+}
+table.auxiliaryTables, td{
+    height: 50px;
+}
+
+#execute, #cancel_b{
+    text-align: center;
+}
+

@@ -1,0 +1,140 @@
+div#inlet_button{
+    background: gray;
+    height: 32px;
+    width: 80px;
+    display: inline-block;
+    float: right;
+    margin-top: -37px;
+    margin-right: 60px;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    font-size: 80%;
+    cursor: pointer;
+}
+div#inlet_button:hover{
+    background-color: #dfdfdf;
+    color: black;
+}
+
+div.login_form{
+    position: absolute;
+    background-color: white;
+    padding: 10px 10px 0 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 7px;
+    right: 0;
+    top: 42px;
+    box-shadow: -6px 6px 10px rgba(0,0,0,0.5);
+}
+div.login_form::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    right: 60px;
+    bottom: 177px; /* Положение треугольника */
+    border: 20px solid transparent; /* Прозрачные границы */
+    border-bottom: 20px solid white;
+}
+td.login_field{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, serif;
+}
+.field, .selector{
+    width: 230px;
+    height: 30px;
+    font-size: 120%;
+    border-radius: 7px;
+}
+
+button{
+    width: 100px;
+    height: 33px;
+    background-color: gray;
+    color: #f4f421;
+    border-radius: 7px;
+    border-style: hidden;
+    font-size: 102%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #dfdfdf;
+    color: black;
+}
+
+.addButton{
+    width: 180px;
+    height: 33px;
+    background-color: gray;
+    color: #f4f421;
+    border-radius: 7px;
+    border-style: hidden;
+    font-size: 102%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.addButton:hover{
+    background-color: #dfdfdf;
+    color: black;
+}
+
+
+
+#reg_text{
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+}
+td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+    width: 40px;
+}
+tr.shown td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_close.png') no-repeat center center;
+    width: 40px;
+}
+
+.modal-form{
+    padding: 15px 15px 15px 15px;
+}
+.modal-header{
+    text-align: center;
+}
+#title{
+    width: 300px;
+    text-align: center;
+}
+
+#modal_close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+    background-color: #bc2826;
+    text-align: center;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    border: solid #656565;
+    color: white;
+}
+
+.hidden_part{
+    text-align: left;
+}
+
+#updateButton, #deleteButton, #logoutButton, #toUserPage{
+    width: 260px;
+    height: 33px;
+}
+#addPerson{
+    width: 300px;
+    height: 33px;
+}
+
+
